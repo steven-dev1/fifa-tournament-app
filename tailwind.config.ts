@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import {nextui} from "@nextui-org/react";
 
 export default {
   content: [
@@ -11,9 +12,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        mainGreen: "#7bf140"
+        mainGreen: "#10e96f"
       },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 } satisfies Config;

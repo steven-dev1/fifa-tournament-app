@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import {Rubik} from 'next/font/google'
+import { Rubik } from 'next/font/google'
 import "./globals.css";
+import MobileNavBar from "@/components/MobileNavBar";
+import DesktopNavBar from "@/components/DesktopNavBar";
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -15,11 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${rubik.className} antialiased`}
       >
-        {children}
+          <MobileNavBar />
+          <DesktopNavBar />
+          {children}
       </body>
     </html>
   );
